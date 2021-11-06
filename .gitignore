@@ -1,0 +1,13 @@
+.Python
+pyvenv.cfg
+pyvenvp.cfg
+.venv
+env/
+venv/
+venvp/
+ENV/
+env.bak/
+venv.bak/
+.idea/
+.idea
+/.idea/
