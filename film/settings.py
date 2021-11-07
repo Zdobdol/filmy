@@ -107,5 +107,9 @@ STATICFILES_DIRS=['my_static']
 MEDIA_URL = '/media/'
 MEDIA_ROOT = 'my_media'
 
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'all_films'
+LOGOUT_REDIRECT_URL = 'login'
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
