@@ -10,14 +10,17 @@
     <link rel="stylesheet" href="{% static 'css.css' %}">
 </head>
 <body>
-
+    <a href="{% url 'new_film' %}">Dodaj nowy film</a>
     {% if films|length == 0 %}
         <h2>BRAK FILMÓW</h2>
     {% else %}
         <h2>Ilość filmów w Bazie Danych: {{ films|length }}</h2>
 
         {% for film in films %}
-            <p>{{ film }} </p>
+            <h3>{{ film }} </h3>
+            <p>{{ film.description }}</p>
+            <a href="{% url 'edit_film' film.id %}">Edytuj</a>
+            <a href="{% url 'delete_film' film.id %}">Usuń</a>
         {% endfor %}
     {% endif %}
 
