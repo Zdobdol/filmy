@@ -1,20 +1,19 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'index.html' %}
+{% load bootstrap %}
 
-    <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form }}
-        <button type="submit">Dodaj Film</button>
-    </form>
+{% block title %} Film form {% endblock %}
+
+{% block page %}
+    <div class="card" style="width: 26rem;">
+      <div class="card-body">
+        <h5 class="card-title">Film Form</h5>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form|bootstrap }}
+                <button type="submit">Dodaj Film</button>
+            </form>
+      </div>
+    </div>
+
     <a href="{% url 'all_films' %}">Cofnij</a>
-
-</body>
-</html>
+{% endblock %}
