@@ -5,3 +5,20 @@ body{
 h2 {
     color:  red;
 }
+
+.film-poster{
+    width: 150px;
+    float: right;
+}
+
+.film-icon {
+    font-size: 1.6rem;
+}
+
+.opis {
+    margin-left: 15px;
+}
+
+.card{
+    width: 36rem;
+}

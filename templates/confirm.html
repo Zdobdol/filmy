@@ -4,13 +4,16 @@
 {% block title %} Usuwanie filmów {% endblock %}
 
 {% block page %}
-
-    <h1>Czy napewno chcesz usunąć ten {{ film.title }}?</h1>
-
-    <form method="post">
-        {% csrf_token %}
-        <button type="submit">Usuń film</button>
+    <div class="card" style="width: 32rem;">
+        <div class="card-body">
+            <h5 class="card-title">Czy napewno chcesz usunąć ten {{ film.title }}?</h5>
+                <form method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Usuń film</button>
     </form>
+        </div>
+    </div>
+
 
     <a href="{% url 'all_films' %}">Cofnij</a>
 
